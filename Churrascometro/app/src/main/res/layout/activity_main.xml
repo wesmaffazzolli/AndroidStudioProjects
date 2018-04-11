@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.androidpro.churrascometro.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:text="Informe a quantidade de homens:"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekBarMen"
+        android:layout_below="@+id/seekBarMen"
+        android:layout_marginTop="19dp"
+        android:text="Informe a quantidade de mulheres:"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="60dp"
+        android:text="Informe a quantidade de crianças:"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <SeekBar
+        android:id="@+id/seekBarMen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="16dp"
+        android:max="30"
+        android:progress="1" />
+
+    <SeekBar
+        android:id="@+id/seekBarWomen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/seekBarKids"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="20dp"
+        android:max="30"
+        android:progress="1" />
+
+    <SeekBar
+        android:id="@+id/seekBarKids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="17dp"
+        android:max="30"
+        android:progress="1" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekBarKids"
+        android:layout_below="@+id/seekBarKids"
+        android:layout_marginTop="31dp"
+        android:onClick="calculate"
+        android:text="Calcular" />
+
+    <TextView
+        android:id="@+id/linguica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/button"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="29dp"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        tools:text="Linguiça:" />
+
+    <TextView
+        android:id="@+id/carne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/linguica"
+        android:layout_below="@+id/linguica"
+        android:layout_marginTop="17dp"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        tools:text="Carne:" />
+
+    <TextView
+        android:id="@+id/tvMen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBarMen"
+        android:layout_toEndOf="@+id/textView2"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tvWomen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/seekBarWomen"
+        android:layout_toEndOf="@+id/textView2"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tvKids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBarKids"
+        android:layout_alignStart="@+id/tvWomen"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        tools:text="1" />
+</android.widget.RelativeLayout>

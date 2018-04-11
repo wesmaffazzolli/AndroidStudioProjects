@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.androidpro.provaex2app.DetailActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Candidato"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <ImageView
+        android:id="@+id/candidatoImageDetail"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/nomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/candidatoImageDetail"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="36dp"
+        android:text="Nome:"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <TextView
+        android:id="@+id/partidoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/nomeTextView"
+        android:layout_below="@+id/nomeTextView"
+        android:layout_marginTop="26dp"
+        android:text="Partido:"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <TextView
+        android:id="@+id/nomeDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/partidoTextView"
+        android:layout_alignStart="@+id/partidoDetail"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        tools:text="valor" />
+
+    <TextView
+        android:id="@+id/partidoDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/partidoTextView"
+        android:layout_alignBottom="@+id/partidoTextView"
+        android:layout_toStartOf="@+id/button"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        tools:text="valor" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/partidoDetail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:text="VOTAR" />
+</RelativeLayout>

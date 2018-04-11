@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.androidpro.multiview.ActivityScreen1">
+
+    <TextView
+        android:id="@+id/screen1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Type your name:"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <Button
+        android:id="@+id/goToScreen2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:onClick="onClick"
+        android:text="GO TO SCREEN 2"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/screen1TextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:text="Name" />
+</android.widget.RelativeLayout>
